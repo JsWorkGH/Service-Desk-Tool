@@ -1,0 +1,69 @@
+{
+	"variables": {
+		"signature": "Thank you,\n\n{fullname}\nYour Role\nYour Companies Name\nPhone Number\nChat: Link to chat",
+		"description": "NAME has contacted the YourCompany because ",
+		"endnotes": "\nOffered additional assistance.\nOffered ticket number.\nPitched survey.\nEnd of interaction."
+	},
+	"templates": {
+		"Active Directory Account Unlock": {
+			"Description": "{description}they need their Active Directory account unlocked.",
+			"Work Notes": "{description}they need their Active Directory account unlocked.\nVerified via METHOD.\nUnchecked \"Account is locked out\" in Active Directory under account in their profile.\nVerified they could log in.{endnotes}",
+			"Customer Visible Notes": "Hello,\n\nPlease contact us anytime at YourCompanyNumber or select Live Chat at LinkToChat if you have any further issues or concerns.\n\n{signature}",
+			"Resolution Notes": "Issue:\nNeeded Active Directory account unlocked.\n\nRoot Cause:\nReasonWhy\n\nResolution Actions:\nVerified via METHOD.\nUnlocked account in Active Directory.\nVerified they could log in.\n\nValidation:\nVerified they could log in.",
+			"FAQs": [
+				{
+					"question": "Can I unlock a privileged account (SD, APP, ect.)?",
+					"answer": "No, you need to verify them and escalate to..."
+				},
+				{
+					"question": "I see multiple accounts, which one do I unlock?",
+					"answer": "Check the status of the accounts, if none are active escalate to..."
+				}
+			]
+		},
+		"Active Directory Password Reset": {
+			"Description": "{description}they need their Active Directory password reset.",
+			"Work Notes": "{description}they need their Active Directory password reset.\nVerified via METHOD.\nReset Active Directory password in Active Directory.\nVerified they could log in.{endnotes}",
+			"Customer Visible Notes": "Hello,\n\nPlease contact us anytime at YourCompanyNumber or select Live Chat at ChatLink if you have any further issues or concerns.\n\n{signature}",
+			"Resolution Notes": "Issue:\nNeeded Active Directory password reset.\n\nRoot Cause:\nReasonWhy\n\nResolution Actions:\nVerified via METHOD.\nReset Active Directory password in Active Directory.\nVerified they could log in.\n\nValidation:\nVerified they could log in.",
+			"FAQs": [
+				{
+					"question": "Can I reset a privileged account (SD, APP, ect.)?",
+					"answer": "No, you need to verify them and escalate to..."
+				},
+				{
+					"question": "I see multiple accounts, which one do I reset?",
+					"answer": "Check the status of the accounts, if none are active escalate to..."
+				}
+			]
+		},
+		"Emails": {
+			"First and Second Attempt": "Hello,\n\nWe're checking in to see if you're still experiencing this issue? If so, please contact us anytime at YourCompanyNumber or select Live Chat at ChatLink.\n\n{signature}",
+			"Third Attempt": "Hello,\n\nWe're checking in to see if you're still experiencing this issue? Unfortunately, due to our policy we're required to close this ticket after three contact attempts. If you're still experiencing the issue, please contact us anytime at YourCompanyNumber or select Live Chat at ChatLink.\n\n{signature}",
+			"Lost Device for User": "Hello,\n\nIn regards to your reported stolen device, please fill out the attached Form. Submission of a police report will need to be submitted and returned as well if the device was stolen.\n\n{signature}",
+			"Lost Device for Security": "Hello,\n\nAsset reported stolen, possession last held DATE. Police report to be filed and Loss of Device form has been sent to affected user.\n\nPlease note ticket TICKET for this issue.\n\nRouting ticket to TEAM for further assistance.\n\n{signature}",
+			"FAQs": [
+				{
+					"question": "How do I send an email to a user or team?",
+					"answer": "You send them through ServiceNow. Select the three dots in the top right hand corner, and select \"Compose Email\""
+				}
+			]
+		},
+		"MFA Reset": {
+			"Description": "{description}they need their MFA reset.",
+			"Work Notes": "{description}they need their MFA reset.\nVerified via METHOD.\nFound their Active Directory account in Active Roles, selected Other Properties tab, entered \"TRUE\" in the \"Issue TAP\" field.\nProvided the TAP-Result field.\nInstructed them to go to https://aka.ms/mysecurityinfo-usgov\nHad them select Security info on the left hand side.\nHad them select Add sign-in method next to the plus sign.\nHad them select Microsoft Authenticator then next, next, scan the code, next, type in the code listed on their phone.\nVerified the new method was showing up.\nHad them remove the previous method.\n{endnotes}",
+			"Customer Visible Notes": "Hello,\n\nPlease contact us anytime at YourCompanyNumber or select Live Chat at ChatLink if you have any further issues or concerns.\n\n{signature}",
+			"Resolution Notes": "Issue:\nNeeded MFA reset.\n\nRoot Cause:\nReasonWhy\n\nResolution Actions:\nVerified via METHOD.\nFound their Active Directory account in Active Roles, selected Other Properties tab, entered \"TRUE\" in the \"Issue TAP\" field.\nProvided the TAP-Result field.\nInstructed them to go to https://aka.ms/mysecurityinfo-usgov\nHad them select Security info on the left hand side.\nHad them select Add sign-in method next to the plus sign.\nHad them select Microsoft Authenticator then next, next, scan the code, next, type in the code listed on their phone.\nVerified the new method was showing up.\nHad them remove the previous method.\n\nValidation:\nVerified they could log in with MFA.",
+			"FAQs": [
+				{
+					"question": "Which Active Directory account do I enable the TAP on?",
+					"answer": "It should always if applicable be applied to their main account. Sometimes it will be applied to a XYZ account if they don't have XYZ."
+				},
+				{
+					"question": "Can we set a TAP for a privileged account?",
+					"answer": "No we can't, verify the user and escalate to..."
+				}
+			]
+		}
+	}
+}
